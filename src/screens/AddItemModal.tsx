@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   Button,
   Image,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -163,7 +164,7 @@ const AddItemModal: React.FC<Props> = ({ isVisible, closeModal }) => {
       <View style={styles.modalSubContainer}>
         <View style={styles.modalWrap}>
           <View style={styles.container}>
-            <View style={styles.subContainer}>
+            <ScrollView style={styles.subContainer}>
               <View style={styles.headerContainer}>
                 <TouchableOpacity onPress={closeModal}>
                   <Text style={styles.cancelText}>Cancel</Text>
@@ -252,7 +253,7 @@ const AddItemModal: React.FC<Props> = ({ isVisible, closeModal }) => {
                 onChangeText={setDescription}
               />
               <View style={styles.footer} />
-            </View>
+            </ScrollView>
           </View>
         </View>
       </View>
